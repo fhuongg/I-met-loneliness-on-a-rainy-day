@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <link href="newstyle.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,384;1,384&display=swap" rel="stylesheet">
+  <title>I Met Loneliness</title>
+</head>
+<body>
+  <audio id="bgm" autoplay loop muted>
+  <source src="images/bgm.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById('bgm');
+
+  function allowSound() {
+    audio.muted = false;
+    audio.volume = 0;
+    audio.play();
+    
+    // Fade in volume slowly
+    let vol = 0;
+    const fade = setInterval(() => {
+      if (vol < 1) {
+        vol += 0.05;
+        audio.volume = vol;
+      } else {
+        clearInterval(fade);
+      }
+    }, 200); // every 200ms
+  }
+
+  // Wait for any interaction
+  window.addEventListener('click', allowSound, { once: true });
+</script>
+  <section class="landing-container">
+    <div class="scroll">
+  <span class="scroll-indent1">scroll</span><br>
+  <span class="scroll-indent2">to</span><br>
+  <span class="scroll-indent3">read</span>
+</div>
+ <div class="poem-title"id="titleone">
+      I met <em data-text="loneliness">loneliness</em>
+    </div>
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="images/rain.mp4" type="video/mp4">
+      <!-- fallback -->
+      Your browser does not support video.
+    </video>
+    <img class="landing-image" id="forest" src="images/landing.png" alt="Forest collage background">
+    <img class="landing-image" id="ghost" src="images/ghost landing.png" alt="White ghost">
+    <img class="landing-image" id="person" src="images/person.png" alt="Person standing in the forest">
+    <div class="poem-title"id="titletwo">
+      on a rainy day
+    </div>
+  </section>
+  <section class="second">
+    <div class="second-content-row">
+    <img class="second-bg" src="images/back.webp" alt="Background" />
+    <img class="second-collage" id="secondghost" src="images/ghost1.png" alt="White ghost made of tissue">
+    <img class="second-collage" id="face" src="images/face 2.png" alt="Face filled with words">
+    <img class="second-collage" id="secondghostwet" src="images/ghost2.png" alt="White ghost made of tissue">
+    <img class="second-collage" id="faceblank" src="images/face 2 copy.png" alt="Face filled with white paint">
+    </div>  
+    <div class="poem-text" id="firstline">
+  I met loneliness<br>
+  on a rainy day,<br><br>
+  His presence<br>
+  <span class="indent1">loomed</span><br>
+  <span class="indent2">over</span><br>
+  <span class="indent3">mine,</span>
+  <div class="second-line">
+    <p>Soul, thousand miles away.</p>
+  </div>
+<div class="highway-row">
+  <img id="highway" src="images/silence.png" alt="Highway collage" />
+  <img id="eye" src="images/eye.png" alt="Eye collage" />
+  <video class="cry" autoplay loop muted playsinline>
+    <source src="images/cry.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+  <div class="third-line">
+    <span class="third-indent1">We exchanged silence,</span><br>
+    <span class="third-indent2">He never looked me </span>
+    <span class="third-indent3">in the <em>face</em>.</span>
+  </div>
+</div>
+<div class="fourth-row">
+  <div class="fourth-line">
+    <p>Have I seen him before?</p>
+  <video class="anywhere" id="anywhere-video" loop muted playsinline>
+      <source src="images/anywhere.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  <img class="curtain"src="images/curtain.png" alt="Curtain image" />
+  <img class="curtain-close"src="images/curtain close.png" alt="Curtain image" />
+<p class="last-line" onclick="location.href='#memories'">(I'd recognize his gaze anywhere.)</p>
+</div>
+</section>
+<section class="memories">
+  <div class="birthday" id="memories">
+    <img class="third-bg" src="images/bg3.webp" alt="Background" />
+    <img class="four-bg" src="images/bg44 copy.webp" alt="Background" />
+    <img class="balloon" src="images/balloon.png" alt="Balloons" />
+    <img class="balloon1" src="images/balloon2.png" alt="Balloons" />
+    <img class="postcard-front" src="images/postcard copy.png" alt="Birthday Postcard" />
+    <img class="postcard-back" src="images/postcard.png" alt="Birthday Postcard Back" />
+  <div class="wishes">
+    <img class="candles" src="images/candles.png" alt="Candles" />
+    <video id="flames" src="images/flames.webm" autoplay loop muted playsinline>
+      <source src="images/flames.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <p class="birthday-line">Though I never believed in wishes anymore.</p>
+  </div>
+  <video class="car-vid" id="carvid" src="images/car.webm" autoplay loop muted playsinline>
+      <source src="images/flames.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  <div class="car-text">
+    <p> He sat in the passenger seat,</p>
+    <p> Breath fogging the glass.</p>
+  </div>
+  <img class="bg41" src="images/bg4.png" alt="Scrap paper" />
+  <img class="littlecar" src="images/car.png" alt="Car" />
+  <div class="hidden-text">Long drives made the world turn blurry.</div>
+  <div class="funeral">
+  <img class="grave-image" src="images/grave.png" alt="Grave view from top" />
+  <img class="flower1" src="images/flowers1.png" alt="Flower" />
+  <img class="flower2" src="images/flowers2.png" alt="Flower" />
+  <div class="funeral-line">
+    <p>He went to my funeral,</p>
+    <p>Staring as I got buried.</p>
+  </div>
+  <p class="funeral-line2"id="funeral-button">Like he wished I had stayed longer.</p>
+  <div class="funeral-line3">
+    <p><em>But what's the point?</em></p>
+    <p>Now we're both</p>
+    <p class="funeral-line4">six</p>
+    <p class="funeral-line5">feet</p>
+    <p class="funeral-line6">under.</p>
+  </div>
+  <div class="dirt-stack" id="trigger">
+<video class="dirt" id="dirt1-video" src="images/dirtt_3.webm" muted playsinline>
+      <source src="images/dirt.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  <video class="dirt2" id="dirt2-video" src="images/dirtt_3_1.webm" muted playsinline>
+      <source src="images/dirtt.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <p class="revisit" id="revisit-button"><em>Revisit</em></p>
+    <p class="credit">© 2025 written and created by Phuong Pham</p>
+  </div>
+</section>
+
+<script>
+  document.getElementById('eye').addEventListener('click', function() {
+    document.querySelector('.cry').classList.add('visible');
+    this.style.opacity = '0'; // Hide the eye image
+    this.style.pointerEvents = 'none'; // Prevent further clicks
+  });
+  document.querySelector('.cry').playbackRate = 0.5;
+</script>
+<script>
+  const curtain = document.querySelector('.curtain');
+const video = document.querySelector('.anywhere');
+
+curtain.addEventListener('click', () => {
+  curtain.style.display = 'none';
+  video.play();
+});
+</script>
+<script>
+  const front = document.querySelector('.postcard-front');
+const back = document.querySelector('.postcard-back');
+
+front.addEventListener('click', () => {
+  front.classList.add('flipped');
+  back.classList.add('flipped');
+});
+
+back.addEventListener('click', () => {
+  front.classList.remove('flipped');
+  back.classList.remove('flipped');
+});
+</script>
+<script>
+    const myVideo = document.getElementById('flames');
+    video.playbackRate = 0.25; // Slows to half speed (1 = normal, 0.5 = 50% slower)
+</script>
+<script>
+  const flames = document.getElementById('flames');
+  const candles = document.querySelector('.candles');
+  const text = document.querySelector('.birthday-line');
+
+  flames.addEventListener('click', () => {
+  flames.classList.add('hide');
+  setTimeout(() => {
+  candles.classList.add('hide');
+  setTimeout(() => {
+    text.style.display = 'block';
+  }, 500);
+}, 3000);
+});
+</script>
+<script>
+const littleCar = document.querySelector('.littlecar');
+const hiddenText = document.querySelector('.hidden-text');
+
+littleCar.addEventListener('click', () => {
+  littleCar.classList.add('move-right');
+  setTimeout(() => {
+    hiddenText.classList.add('reveal');
+  }, 2000); // wait for 2 seconds
+});
+</script>
+<script>
+const playButton = document.getElementById('funeral-button');
+const newvideo = document.getElementById('dirt1-video');
+
+playButton.addEventListener('click', () => {
+  newvideo.style.display = 'block';
+  newvideo.play();
+  newvideo.addEventListener('ended', () => {
+    newvideo.pause();
+  });
+});
+</script>
+<script>
+const playButton1 = document.getElementById('funeral-button');
+const newervideo = document.getElementById('dirt2-video');
+
+playButton1.addEventListener('click', () => {
+  newervideo.style.display = 'block';
+  newervideo.play();
+  newervideo.addEventListener('ended', () => {
+    newervideo.pause();
+  });
+});
+</script>
+<script>
+    const newestVideo = document.getElementById('carvid');
+    newestVideo.playbackRate = 0.5; // Slows to half speed (1 = normal, 0.5 = 50% slower)
+</script>
+<script>
+    const anywhereVideo = document.getElementById('anywhere-video');
+    anywhereVideo.playbackRate = 1.2; // Slows to half speed (1 = normal, 0.5 = 50% slower)
+</script>
+<script>
+  const button = document.getElementById('revisit-button');
+
+button.addEventListener('click', () => {
+  window.scrollTo(0, 0); // scroll to the top
+  window.location.reload(); // reload the page
+});
+</script>
